@@ -5,4 +5,5 @@ Install [vot-cli](https://github.com/FOSWLY/vot-cli)
 
 ### Move the files to the mpv folder.
 Linux path:    C:\users\USERNAME\AppData\Roaming\mpv
+
 Windows path:  /home/USERNAME/.config/mpv
