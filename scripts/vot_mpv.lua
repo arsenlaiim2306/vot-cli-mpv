@@ -1,11 +1,10 @@
-local vot_cli_path = "vot-cli"
-
 local continue_trans = false
 local enabled = false
 local last_path = ""
 
 
 local settings = {
+	vot_cli_path = "vot-cli",
 	load_key = "y",
 	lang = "ru"
 }
@@ -23,7 +22,7 @@ function get_path(path)
 	path = path:gsub("https://youtu.be/", "https://www.youtube.com/watch?v=")
 	path = path:gsub("ytdl://", "https://www.youtube.com/watch?v=")
 
-	local handle = io.popen(vot_cli_path .. " " .. path .. " --reslang " .. settings.lang)
+	local handle = io.popen(settings.vot_cli_path .. " " .. path .. " --reslang " .. settings.lang)
 
 	new_path = handle:read('*a')
 	new_path = string.match(new_path, "https://vtrans[^%s]+")
