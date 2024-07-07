@@ -1,3 +1,0 @@
-vot_cli_path = "vot-cli"
-load_key = "y"
-lang = "ru"
